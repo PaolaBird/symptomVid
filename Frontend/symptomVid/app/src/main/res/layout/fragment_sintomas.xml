@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragments.FragmentSintomas"
+        android:background="@drawable/border_radius">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seleccione cual de los siguientes sintomas ha sentido:"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#000"
+                android:fontFamily="sans-serif-condensed"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="10dp">
+                <CheckBox
+                    android:id="@+id/chb_tos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Tiene tos?"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#000"/>
+
+                <CheckBox
+                    android:id="@+id/chb_escalofrios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Tiene escalofrios?"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#000"/>
+                <CheckBox
+                    android:id="@+id/chb_diarrea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Ha tenido diarrea?"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#000"/>
+                <CheckBox
+                    android:id="@+id/chb_dolor_garganta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Tiene dolor de garganta?"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#000"/>
+                <CheckBox
+                    android:id="@+id/chb_dolores_musculares"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Ha tenido dolores musculares?"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#000"/>
+                <CheckBox
+                    android:id="@+id/chb_dolor_cabeza"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Tiene dolor de cabeza?"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#000"/>
+                <CheckBox
+                    android:id="@+id/chb_fiebre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Ha tenido fiebre de 38° o mas?"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#000"/>
+                <CheckBox
+                    android:id="@+id/chb_cansancio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Ha sentido cansancio/debilidad?"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#000"/>
+                <CheckBox
+                    android:id="@+id/chb_dificultad_respirar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Ha tenido dificultad para respirar?"
+                    android:textColor="#000"/>
+
+                <CheckBox
+                    android:id="@+id/chb_viajado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Ha viajado en los ultimos 14 dias? "
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#000"/>
+                <CheckBox
+                    android:id="@+id/chb_visitado_areas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Ha visitado areas infectadas por Covid-19?"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#000"/>
+                <CheckBox
+                    android:id="@+id/chb_visitado_pacientes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Visitó o ha cuidado pacientes con Covid-19?"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="#000"/>
+
+            </LinearLayout>
+
+            <Button android:id="@+id/btn_evaluate"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Analizar"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                style="@style/RaisedButtonDark"
+                android:background="@drawable/custom_button"
+                android:fontFamily="sans-serif-condensed"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

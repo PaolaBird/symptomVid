@@ -1,17 +1,3 @@
-diagnosticar(Msg) :- preguntar(A, '¿Tiene tos? (y/n)'),
-    		preguntar(B, '¿Tiene escalofrios? (y/n)'),
-    		preguntar(C, '¿Ha tenido diarrea? (y/n)'),
-    		preguntar(D, '¿Tiene dolor de garganta? (y/n)'),
-    		preguntar(E, '¿Ha tenido dolores musculares? (y/n)'),
-    		preguntar(F, '¿Tiene dolor de cabeza? (y/n)'),
-			preguntar(G, '¿Ha tenido fiebre de 38° o mas? (y/n)'),
-    		preguntar(H, '¿Ha tenido dificultad para respirar? (y/n)'),
-    		preguntar(I, '¿Ha sentido cansancio/debilidad? (y/n)'),
-			preguntar(J, '¿Ha viajado en los ultimos 14 dias? (y/n)'),
-    		preguntar(K, '¿Ha visitado areas infectadas por Covid 19? (y/n)'),
-    		preguntar(L, '¿Visitó o ha cuidado pacientes con Covid 19? (y/n)'),
-    		sugerencia(Msg, A+B+C+D+E+F+G+H+I+J+K+L).
-
 preguntar(Pts, P) :- pregunta(P, R), puntos(Pts, P, R).
 
 pregunta(Preg, Ans) :- write(Preg), read(Ans), (Ans=y; Ans=n).

@@ -17,7 +17,7 @@ class Controller(Resource):
         viajado = request.get_json("viajado")
         visitado_areas = request.get_json("visitado_areas")
         visitado_pacientes = request.get_json("visitado_pacientes")
-
+        print(request.get_json())
         dic = request.get_json()
         lis = list(dic.values())
         prologModel = PrologModel()

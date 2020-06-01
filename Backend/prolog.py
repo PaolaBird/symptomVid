@@ -30,6 +30,7 @@ class PrologModel:
         q = "sugerencia(Variable, " + str(suma) + ")"
         return list(p.query(q))
 
+
     def sintomas(self, answers):
         questions = [
             1,
@@ -62,7 +63,7 @@ class PrologModel:
                 "result": "Hidratese adecuadamente, mantenga una buena higiene personal. Observe y revalore en 2 días.",
             }
         elif 6 <= suma <= 12:
-            sugerencia = {"type": "3", "result": "Debe ir a una consulta médica"}
+            sugerencia = {"type": "3", "result": "Debe ir a una consulta médica."}
 
         elif 13 <= suma <= 20:
             sugerencia = {
@@ -77,4 +78,3 @@ class PrologModel:
 # x = ["y", "y", "y", "y", "y", "y", "y", "y", "y", "y", "y", "y"]
 # print(type(x))
 # print(p.symptoms(x))
-# https://groups.google.com/forum/#!topic/swi-prolog/3xctENNrHD8

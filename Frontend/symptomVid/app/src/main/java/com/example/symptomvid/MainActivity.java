@@ -32,17 +32,40 @@ public class MainActivity extends AppCompatActivity {
 
     public void inflarViewSintomas() {
         fragmentSintomas = new FragmentSintomas();
-        getSupportFragmentManager().beginTransaction().replace(R.id.containerFragments, fragmentSintomas).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.containerFragments, fragmentSintomas).addToBackStack(null).commit();
     }
 
     public void inflarViewResultados(final DtoResultado dtoResultado) {
         fragmentResultados = new FragmentResultados(dtoResultado);
-        getSupportFragmentManager().beginTransaction().replace(R.id.containerFragments, fragmentResultados).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.containerFragments, fragmentResultados).addToBackStack(null).commit();
     }
 
     public void validarSintomas(final DtoSintomas dtoSintomas) {
         mainPresenter.inflarResulFragment(this, dtoSintomas );
+        //mainPresenter.prueba(this);
     }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            hideSystemUI();
+        }
+    }
+
+    private void hideSystemUI() {
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN);
+
+
+
+    }
+
 
 
 }

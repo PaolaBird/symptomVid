@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Fragments.FragmentSintomas"
         android:background="@drawable/border_radius">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0.3"
-        android:fillViewport="true"
-        android:fitsSystemWindows="true">
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="10dp">
 
@@ -29,11 +25,19 @@
                 android:layout_gravity="center_horizontal"
                 android:textColor="#000"
                 android:fontFamily="sans-serif-condensed"/>
-            <LinearLayout
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:fitsSystemWindows="true">
+                <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginVertical="10dp">
+                android:layout_marginTop="10dp" >
+
+
                 <CheckBox
                     android:id="@+id/chb_tos"
                     android:layout_width="match_parent"
@@ -85,17 +89,18 @@
                     android:layout_marginBottom="5dp"
                     android:textColor="#000"/>
                 <CheckBox
+                    android:id="@+id/chb_dificultad_respirar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¿Ha tenido dificultad para respirar?"
+                    android:textColor="#000"/>
+
+                <CheckBox
                     android:id="@+id/chb_cansancio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="¿Ha sentido cansancio/debilidad?"
                     android:layout_marginBottom="5dp"
-                    android:textColor="#000"/>
-                <CheckBox
-                    android:id="@+id/chb_dificultad_respirar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="¿Ha tenido dificultad para respirar?"
                     android:textColor="#000"/>
 
                 <CheckBox
@@ -119,21 +124,25 @@
                     android:text="¿Visitó o ha cuidado pacientes con Covid-19?"
                     android:layout_marginBottom="5dp"
                     android:textColor="#000"/>
+                    <Button
+                        android:id="@+id/btn_evaluate"
+                        style="@style/RaisedButtonDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/custom_button"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Analizar"
+                        android:textColor="#fff"
+                        android:layout_marginBottom="70dp"
+                        />
 
             </LinearLayout>
+            </ScrollView>
 
-            <Button android:id="@+id/btn_evaluate"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Analizar"
-                android:layout_gravity="center"
-                android:textColor="#fff"
-                style="@style/RaisedButtonDark"
-                android:background="@drawable/custom_button"
-                android:fontFamily="sans-serif-condensed"/>
+
 
         </LinearLayout>
 
-    </ScrollView>
 </FrameLayout>

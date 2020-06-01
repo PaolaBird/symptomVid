@@ -25,7 +25,7 @@ public class MainPresenter {
         final ProgressDialog progressDialog = new ProgressDialog(context);
         progressDialog.setMessage("Analizando los sintomas...");
         progressDialog.show();
-        String url = "https://f760616c47c5.ngrok.io/api";
+        String url = "https://672287f748c8.ngrok.io/api";
         RequestQueue queue = Volley.newRequestQueue(context);
         try {
 
@@ -82,4 +82,15 @@ public class MainPresenter {
         }
 
     }
+
+//    public void prueba(final MainActivity context){
+//        final ProgressDialog progressDialog = new ProgressDialog(context);
+//        progressDialog.setMessage("Analizando los sintomas...");
+//        progressDialog.show();
+//        //DtoResultado dtoResultado = new DtoResultado("1","Puede estar relacionado con estrés. Mantenerse observando.");
+//        DtoResultado dtoResultado = new DtoResultado("4","REPORTESE DE INMEDIATO A EPIDEMIOLOGÍA.");
+//        progressDialog.dismiss();
+//        context.inflarViewResultados(dtoResultado);
+//
+//    }
 }

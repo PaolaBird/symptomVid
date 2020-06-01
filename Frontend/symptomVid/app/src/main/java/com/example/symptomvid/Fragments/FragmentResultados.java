@@ -49,10 +49,10 @@ public class FragmentResultados extends Fragment {
                 image_type.setImageResource(R.drawable.type_2);
                 break;
             case "3":
-                image_type.setImageResource(R.drawable.type_2);
+                image_type.setImageResource(R.drawable.type_3);
                 break;
             case "4":
-                image_type.setImageResource(R.drawable.type_2);
+                image_type.setImageResource(R.drawable.type_4);
                 break;
         }
 
